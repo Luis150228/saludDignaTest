@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Encuesta de satisfaccion referente al aumento de ancho de banda en sucursales.">
+    <meta name="author" content="Rangel Diaz Luis Fernando">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/Catovatech_Exagono.svg">
+    <title>Encuesta de Internet</title>
+</head>
+<body>
+    <main>
+        <section class="glass">
+
+            <div class="encabezado">
+                <div class="titulo">
+                    <a href="https://fast.com/es/" title="FAST Internet" target="_blank"><img src="./assets/img/Catovatech_Exagono_text.svg" alt="Catovatech"></a>
+                </div>
+                <div class="descripcion">
+                    <h3>Encuesta de satisfacción de internet</h3>
+                    <p>Actualmente se están implementando mejoras a la velocidad de red dentro de las sucursales por lo que solicitamos de su invaluable apoyo para contestar la siguiente encuesta.</p>
+                    <p>Para dar inicio a la encuesta le solicitamos nos indique el centro de costos del cual nos brindara su opinión.
+                    </p>
+                </div>
+                <div class="sucursal">
+                    <h3>Ingrese sus datos por favor</h3>
+                    <input class="paticipante" type="text" id="participante" name="participante" maxlength="30" minlength="4" placeholder="Nombre">
+                    <input class="paticipante" type="mail" id="mail" name="mail" minlength="6" placeholder="Correo">
+                </div>
+                <div class="catovatech">
+                    <a href="https://fast.com/es/" title="fast.com" target="_blank"><img src="./assets/img/Catovatech_Exagono.svg" alt="Catovatech" ></a>
+                </div>
+                <div class="creado">
+                    <p>2021 Create by RADL</p>
+                </div>
+            </div>
+
+            <div class="encuesta">
+                <div class="hora">
+                    <h2 id="hora"></h2>
+                    </div>
+                <div id="preguntas">
+                    <div id="message"></div>
+                    <div class="pregunta">
+                        <h2>1.	Después del incremento del ancho de banda en su Sucursal, ¿percibió alguna mejora en los tiempos de respuesta al utilizar sus principales aplicativos? (No Aplica para WIFI o red Inalámbrica)</h2>
+                        <div class="emojis">
+                            <div class="emojis" id="pregunta4">
+                                <img src="./assets/img/emojis/FX001_1.png" alt="Muy Malo" data-name="2">
+                                <img src="./assets/img/emojis/FX005_1.png" alt="Muy Satisfecho" data-name="4">
+                            </div>
+                        </div>
+                        <h2 id="msg_4"></h2>
+                    </div>
+                    <div class="pregunta">
+                        <h2>¿Qué tan satisfecho se encuentra con los tiempos de respuesta de cada uno de los siguientes aspectos?</h2>
+                    </div>
+                    <div class="pregunta">
+                        <h2>2.	Correo (envío y recepción):</h2>
+                        <div class="emojis" id="pregunta1">
+                            <img src="./assets/img/emojis/FX001_1.png" alt="Muy Malo" data-name="1">
+                            <img src="./assets/img/emojis/FX002_1.png" alt="Malo" data-name="2">
+                            <img src="./assets/img/emojis/FX004_1.png" alt="Satisfecho" data-name="4">
+                            <img src="./assets/img/emojis/FX005_1.png" alt="Muy Satisfecho" data-name="5">
+                        </div>
+                        <h2 id="msg_1"></h2>
+                    </div>
+                    <div class="pregunta">
+                        <h2>3.	Principales aplicativos (accesos y consultas):</h2>
+                        <div class="emojis" id="pregunta2">
+                            <img src="./assets/img/emojis/FX001_1.png" alt="Muy Malo" data-name="1">
+                            <img src="./assets/img/emojis/FX002_1.png" alt="Malo" data-name="2">
+                            <img src="./assets/img/emojis/FX004_1.png" alt="Satisfecho" data-name="4">
+                            <img src="./assets/img/emojis/FX005_1.png" alt="Muy Satisfecho" data-name="5">
+                        </div>
+                        <h2 id="msg_2"></h2>
+                    </div>
+                    <div class="pregunta">
+                        <h2>4.	¿La velocidad de enrolamiento de Biométricos mejoró?:</h2>
+                        <div class="emojis" id="pregunta3">
+                            <img src="./assets/img/emojis/FX001_1.png" alt="Muy Malo" data-name="1">
+                            <img src="./assets/img/emojis/FX002_1.png" alt="Malo" data-name="2">
+                            <img src="./assets/img/emojis/FX004_1.png" alt="Satisfecho" data-name="4">
+                            <img src="./assets/img/emojis/FX005_1.png" alt="Muy Satisfecho" data-name="5">
+                        </div>
+                        <h2 id="msg_3"></h2>
+                    </div>
+                    <div class="enviar">
+                        <form id="frm_encuesta">
+                            <div class="seccA">
+                                <input class="form-datas" type="number" step="0.01" id="velocidad" name="velocidad" placeholder="Velocidad de internet 0.00" >
+                                <input class="form-datas" type="date" id="fecha" name="fecha" placeholder="Dia de evaluacion" >
+                            </div>
+                            <input type="hidden" id="encuestado" name="encuestado" required >
+                            <input type="hidden" id="correo" name="correo" required >
+                            <input type="hidden" id="q1" name="question1" required >
+                            <input type="hidden" id="q2" name="question2" required >
+                            <input type="hidden" id="q3" name="question3" required >
+                            <input type="hidden" id="q4" name="question4" required >
+                            <button class="btn-enviar anime" type="submit"><span>Enviar Encuesta</span></button>
+                        </form>
+                    </div> 
+                </div>               
+            </div>
+        </section>
+    </main>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
